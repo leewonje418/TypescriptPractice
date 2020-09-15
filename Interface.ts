@@ -17,3 +17,25 @@ let myLabel = <Label> {
 };
 
 labelPrint(myLabel);
+
+interface Config {
+    name: string;
+    path: string;
+    version?: string;
+}
+
+interface App {
+    fullPath: string;
+    version?: string;
+}
+
+function applicationInit(config: Config): App {
+    let app = {fullPath: config.path + config.name} as App;
+    if (config.version) {
+        app.version = config.version
+    }
+    return app;
+}
+//<Config>와 as Config는 같은의미를 지님
+console.log(applicationInit(<Config>{ path: '/home/', name: 'user'}));
+console.log(applicationInit({path: '/home/', name: 'user', version: '0.1.1'} as Config));
