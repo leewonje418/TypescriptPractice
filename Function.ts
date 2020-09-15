@@ -11,7 +11,7 @@ function point2(x: number, y: number): number {
     return x + y;
 }
 
-// 함수에서는 기본값을 넣어줄 수 있고, 필수 파라미터를 넣지 않을수도 있다. 필수 파라미터가 아닐경우 ?를 붙인다.
+// 함수에서는 기본값을 넣어줄 수 있고, 필수 파라미터를 넣지 않을수도 있다.
 function point3(x: number, y: number = 10): number {
     return x + y;
 }
@@ -26,7 +26,7 @@ function optionPoint(x: number, y?: number): number {
 }
 
 console.log("OUTPUT:" + optionPoint(10, 10));
-console.log("OPUPUT:" + optionPoint(10));
+console.log("OUTPUT:" + optionPoint(10));
 
 // 나머지 Rest파라미터는 파라미터들을 모아서 한 번에 변수로 대입해서 사용하는 방법이다.
 function cities(name: string, ...restName: string[]) {
