@@ -42,3 +42,4 @@ class Rect2 extends Face {
 
 const rect = new Rect2();
 console.log(rect.getEdge());
+//console.log(rect.edge); // error
