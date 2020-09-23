@@ -30,7 +30,7 @@ class Face2 {
     }
 }
 
-class Rect2 extends Face {
+class Rect2 extends Face2 {
     constructor() {
         super(4);
     }
@@ -43,3 +43,25 @@ class Rect2 extends Face {
 const rect = new Rect2();
 console.log(rect.getEdge());
 //console.log(rect.edge); // error
+
+//protected
+class Face3 {
+    protected edge: number;
+
+    constructor(edge: number) {
+        this.edge = edge;
+    }
+}
+
+class Rect3 extends Face {
+    constructor() {
+        super(4);
+    }
+    public getEdge() {
+        return this.edge
+    }
+}
+
+const rect3 = new Rect3();
+console.log(rect.getEdge());
+//console.log(rect.edge); //error 
