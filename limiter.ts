@@ -53,7 +53,7 @@ class Face3 {
     }
 }
 
-class Rect3 extends Face {
+class Rect3 extends Face3 {
     constructor() {
         super(4);
     }
@@ -65,3 +65,16 @@ class Rect3 extends Face {
 const rect3 = new Rect3();
 console.log(rect.getEdge());
 //console.log(rect.edge); //error 
+
+//readonly
+class Face4 {
+    readonly vertex: number = 3;
+    readonly edge: number;
+    constructor(edge: number) {
+        this.edge = edge;
+    }
+
+    public eddEdge() {
+        //this.edge++; error beacauce it is readonly
+    }
+}
